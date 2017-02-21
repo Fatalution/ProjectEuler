@@ -6,3 +6,19 @@
 
 # By considering the terms in the Fibonacci sequence whose values
 # do not exceed four million, find the sum of the even-valued terms.
+
+
+numberOld = 0
+numberNew = 1
+result = 0
+
+while numberNew <= 4000000:
+
+    numberOldTwice = numberOld
+    numberOld = numberNew
+    numberNew = numberOldTwice + numberOld
+
+    if numberNew%2 == 0:
+        result += numberNew
+
+print result
